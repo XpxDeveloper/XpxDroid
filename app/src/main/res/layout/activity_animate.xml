@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.xpsoft.xpxDroid.widget.AppTitleBar
+            android:id="@+id/appTitleBar"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"></com.xpsoft.xpxDroid.widget.AppTitleBar>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp">
+
+            <Button
+                android:id="@+id/btn"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="btnClick"
+                android:onClick="btnClick" />
+            <Button
+                android:id="@+id/btn2"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="btnClick2"
+                android:onClick="btnClick2" />
+            <Button
+                android:id="@+id/btn3"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="btnClick3"
+                android:onClick="btnClick3" />
+            <LinearLayout
+                android:id="@+id/llAnimate"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:orientation="horizontal"
+                android:background="@color/red"
+                android:visibility="gone">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="测试一下"
+                    android:gravity="center"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

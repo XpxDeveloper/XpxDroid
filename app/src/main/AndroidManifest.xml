@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.xpsoft.xpxDroid">
+
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <!-- 访问权限 -->
+    <!--<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!--<uses-permission android:name="android.permission.WRITE_SETTINGS" />-->
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.ACCES_MOCK_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <!--<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />-->
+    <!--<uses-permission android:name="android.permission.READ_LOGS" />-->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- @style/AppTheme -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-feature android:name="android.hardware.camera" />
+    <!--<uses-permission android:name="android.permission.CHANGE_CONFIGURATION"/>-->
+    <!-- 百度地图权限 -->
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:name=".global.baseApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:screenOrientation="portrait"
+        android:largeHeap="true"
+        tools:replace="android:icon, android:label,android:theme"
+        android:theme="@style/AppTheme">
+        <!-- 百度地图的key值 -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="PxKjuVQMPa54E3pn7XZb71qUdxlK2NVg" />
+        <!-- 导航服务 -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":bdservice_v1"></service>
+
+        <!--Android 适配18:9 和 16:9 屏幕尺寸比例的问题-->
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.1"/>
+        <meta-data android:name="com.amap.api.v2.apikey" android:value="c630a304b48f071c8903da1d7fa7b451">
+        </meta-data>
+        <activity android:name=".views.DeskTopActivity" android:configChanges="orientation|screenSize" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".views.IM1_0Activity" android:configChanges="orientation|screenSize" android:launchMode="singleTop">
+        </activity>
+        <activity android:name=".views.IM2_0Activity" android:configChanges="orientation|screenSize" android:launchMode="singleTop">
+        </activity>
+        <activity android:name=".views.DrawerActivity" android:configChanges="orientation|screenSize" android:launchMode="singleTop">
+        </activity>
+        <activity android:name=".views.ContactsActivity" android:configChanges="orientation|screenSize" android:launchMode="singleTop">
+        </activity>
+        <activity android:name=".views.Test3Activity" android:configChanges="orientation|screenSize" android:launchMode="singleTop">
+        </activity>
+        <activity android:name=".views.DialogActivity" android:configChanges="orientation|screenSize" android:launchMode="singleTop">
+        </activity>
+        <activity android:name=".views.BMapActivity" android:configChanges="orientation|screenSize" android:launchMode="singleTop">
+        </activity>
+        <activity android:name=".views.bmap.MarkerClusterDemo" android:configChanges="orientation|screenSize" android:launchMode="singleTop">
+        </activity>
+
+        <activity android:name=".views.IjkplayerActivity" android:configChanges="orientation|screenSize" android:launchMode="singleTop">
+        </activity>
+        <activity android:name=".views.RetrofitActivity" android:configChanges="orientation|screenSize" android:launchMode="singleTop">
+        </activity>
+        <activity android:name=".views.CustomViewActivity" android:configChanges="orientation|screenSize" android:launchMode="singleTop">
+        </activity>
+        <activity android:name=".views.AnimateActivity" android:configChanges="orientation|screenSize" android:launchMode="singleTop">
+        </activity>
+        <activity android:name=".views.MVPActivity" android:configChanges="orientation|screenSize" android:launchMode="singleTop">
+        </activity>
+        <activity android:name=".views.AppBarLayoutActivity" android:configChanges="orientation|screenSize" android:launchMode="singleTop">
+        </activity>
+        <activity android:name=".views.searchviews.SearchActivity" android:configChanges="orientation|screenSize" android:launchMode="singleTop">
+        </activity>
+        <activity android:name=".views.gdmap.gdmapActivity" android:configChanges="orientation|screenSize" android:launchMode="singleTop">
+        </activity>
+        <activity android:name=".views.gdmap.cluster.ClusterDemoActivity" android:configChanges="orientation|screenSize" android:launchMode="singleTop">
+        </activity>
+        <activity android:name=".views.PermissionTestActivity" android:configChanges="orientation|screenSize" android:launchMode="singleTop">
+        </activity>
+        <activity android:name=".views.TBSActivity" android:configChanges="orientation|screenSize" android:launchMode="singleTop">
+        </activity>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:orientation="vertical"
+        android:clickable="false"
+        android:background="@drawable/demo_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<!--<GridView
+    android:id="@+id/gridview"
+    android:layout_alignParentBottom="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#999999"
+    android:stretchMode="columnWidth"
+    android:numColumns="3"
+    android:gravity="center"
+    android:verticalSpacing="1dp"
+    android:horizontalSpacing="1dp"
+    android:padding="1dp"
+    ></GridView>-->
+      <!--  <GridView
+            android:id="@+id/gridview"
+            android:layout_marginBottom="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:stretchMode="columnWidth"
+            android:numColumns="3"
+            android:gravity="center"
+            ></GridView>-->
+
+        <com.xpsoft.xpxDroid.widget.ViewPagerCustomScroll
+            android:id="@+id/ViewPager"
+            android:paddingBottom="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></com.xpsoft.xpxDroid.widget.ViewPagerCustomScroll>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/ll"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"></LinearLayout>
+    </RelativeLayout>
+</layout>

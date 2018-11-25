@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomView">
+
+        <attr name="xpxText" format="string"></attr>
+        <attr name="xpxColor" format="color"></attr>
+        <attr name="xpxTextSize" format="dimension"></attr>
+        <attr name="xpxBackgroundColor" format="color"></attr>
+        <attr name="xpxRadius" format="dimension"></attr>
+
+        <attr name="circle_color" format="color"></attr>
+        <attr name="circle_background_color" format="color"></attr>
+        <attr name="progress_wave_color" format="color"></attr>
+        <attr name="progress_text_size" format="dimension"></attr>
+        <attr name="progress_text_color" format="color"></attr>
+
+    </declare-styleable>
+    <declare-styleable name="IconAndName">
+
+    </declare-styleable>
+</resources>

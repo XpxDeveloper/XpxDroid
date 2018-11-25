@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="1000dp"
+    android:layout_height="700dp"
+    android:background="@color/black"
+   android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:id="@+id/dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/black"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:paddingStart="5dp"
+            android:text="查看大图"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+     
+        <RelativeLayout
+                android:id="@+id/btn_close"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"     
+                android:clickable="true"                          
+                android:layout_alignParentRight="true" >
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:clickable="false"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/btn_close_click" />
+            </RelativeLayout>
+        
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/dialog_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"        
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:layout_marginStart="20dp" >
+
+         <com.xpsoft.xpxDroid.tools.showLargePhoto.DragImageView
+        android:id="@+id/dialog_picture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:scaleType="fitXY"
+        />
+    </LinearLayout>
+    
+</LinearLayout>

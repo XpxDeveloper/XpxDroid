@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:clickable="true"
+        android:background="@drawable/btn_press_common1"
+        android:descendantFocusability="blocksDescendants"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        android:paddingTop="3dp">
+
+        <RelativeLayout
+            android:id="@+id/groupIcon"
+            android:layout_width="55dp"
+            android:layout_height="match_parent"
+            android:clickable="false">
+
+            <TextView
+                android:id="@+id/orgName"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="2dp"
+                android:background="@drawable/btn_border_rectangle_offline"
+                android:clickable="false"
+                android:foregroundGravity="center"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="福州"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/msgcount"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginBottom="-20dp"
+                android:layout_marginStart="0dp"
+                android:gravity="center"
+                android:background="@drawable/btn_border_circle_msgcount"
+                android:clickable="false"
+                android:text="10"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_groupTime"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:clickable="false"
+            android:paddingTop="7dp">
+
+            <TextView
+                android:id="@+id/groupTime"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="false"
+                android:text="10:10"
+                android:textSize="10sp"
+                android:gravity="right"
+                android:textColor="@color/dispatchGroupListTime" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/ll_groupTime"
+            android:layout_toRightOf="@id/groupIcon"
+            android:clickable="false"
+            android:paddingTop="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/groupName"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+
+                android:clickable="false"
+                android:gravity="center_vertical"
+                android:text="群昵称1"
+                android:textColor="@color/dispatchGroupName"
+                android:textSize="@dimen/dispatchGroupName" />
+
+            <TextView
+                android:id="@+id/groupMsg"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:clickable="false"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:text="张三：你好，请多指教"
+                android:textSize="@dimen/dispatchChatText" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

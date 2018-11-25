@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:clickable="false"
+    android:layout_margin="0dp"
+    android:background="@color/transparent"
+    android:id="@+id/container"
+    android:descendantFocusability="blocksDescendants"
+    android:padding="5dp">
+
+    <ImageView
+        android:id="@+id/memberstate"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        />
+
+    <TextView
+        android:id="@+id/membername"
+        android:layout_width="wrap_content"
+        android:minWidth="60dp"
+        android:maxWidth="100dp"
+        android:layout_height="20dp"
+        android:background="@color/transparent"
+        android:gravity="center"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="指挥中心1"
+        android:textColor="@color/red"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:textSize="12sp" />
+</LinearLayout>

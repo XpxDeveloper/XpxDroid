@@ -1,0 +1,96 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/dialog_edittext_errorcolor</item>
+        <item name="android:textColorHint">@color/style_divider_color</item>
+        <item name="colorControlNormal">@color/white</item>
+        <item name="colorControlActivated">@color/dialog_edittext_errorcolor</item>
+        <item name="colorControlHighlight">@color/dialog_edittext_errorcolor</item>
+        <item name="android:windowAnimationStyle">@style/activityAnimation</item>
+        <!-- spinner style -->
+        <item name="android:dropDownListViewStyle">@style/SpinnerStyle</item>
+
+        <!--以下几个，是因为在自己的华为测试机上运行时，发现dialog顶部有一条横线不知道怎么来的，百度后找到这个style属性 但是仍然没什么用 begin-->
+        <!--<item name="android:windowIsFloating">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:fullBright">@color/transparent</item>
+        <item name="android:fullDark">@color/transparent</item>
+        <item name="android:topBright">@color/transparent</item>
+        <item name="android:topDark">@color/transparent</item>
+        <item name="android:borderlessButtonStyle">@color/transparent</item>-->
+        <!--以下几个，是因为在自己的华为测试机上运行时，发现dialog顶部有一条横线不知道怎么来的，百度后找到这个style属性 但是仍然没什么用 end-->
+
+    </style>
+
+    <style name="SpinnerStyle" parent="android:Widget.ListView.DropDown">
+        <!-- 分隔线颜色 -->
+        <item name="android:divider">#00ff00</item>
+        <item name="android:dividerHeight">1dp</item>
+        <!-- item按下效果 -->
+        <!--<item name="android:listSelector">@drawable/selector_bg_text</item>-->
+    </style>
+    <!-- animation 样式 -->
+    <style name="activityAnimation" parent="@android:style/Animation">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_right_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_left_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_left_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_right_out</item>
+    </style>
+
+    <style name="Dialog.FullScreen" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsFloating">false</item>
+    </style>
+    <!--屏幕底部的dialog-->
+    <style name="BottomDialog" parent="AppTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <!-- Dialog进入及退出动画 -->
+        <item name="android:windowAnimationStyle">@style/BottomToTopAnim</item>
+
+    </style>
+
+    <style name="BottomToTopAnim" parent="android:Animation">
+        <item name="@android:windowEnterAnimation">@anim/bottomview_anim_enter</item>
+        <item name="@android:windowExitAnimation">@anim/bottomview_anim_exit</item>
+    </style>
+
+    <style name="ClusterIcon.TextAppearance" parent="android:TextAppearance">
+        <item name="android:textColor">#ffeeeeee</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <!-- Base application theme. -->
+    <style name="Bubble.TextAppearance.Dark" parent="android:TextAppearance.Medium">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#ff7f7f7f</item>
+    </style>
+
+    <style name="Bubble.TextAppearance.Light" parent="Bubble.TextAppearance.Dark">
+        <item name="android:textColor">#ffeeeeee</item>
+    </style>
+
+    <!--全屏对话框，用于查看大图-->
+    <style name="MyFullScreenDialog" parent="@android:style/Theme.Holo.Light.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+    <style name="toolbar_theme" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="colorControlNormal">@color/black</item>
+        <item name="android:actionBarSize">46dp</item>
+    </style>
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>

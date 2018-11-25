@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com..xpsoft.xpxDroid.views.baseFragActivity">
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+       <!-- <com..xpsoft.xpxDroid.widget.AppTitleBar
+            android:id="@+id/apptitlebar"
+            android:layout_width="match_parent"
+            android:background="@color/green"
+            android:layout_height="40dp"></com..xpsoft.xpxDroid.widget.AppTitleBar>-->
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/mTabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            app:tabTextColor="@color/white"
+            app:tabSelectedTextColor="@color/yellow"
+            app:tabIndicatorColor="@color/yellow"
+            app:tabBackground="@color/red"
+            android:background="@color/green"
+            ></android.support.design.widget.TabLayout>
+
+        <com.xpsoft.xpxDroid.widget.ViewPagerCustomScroll
+            android:layout_below="@id/mTabLayout"
+            android:id="@+id/ViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></com.xpsoft.xpxDroid.widget.ViewPagerCustomScroll>
+
+    </RelativeLayout>
+</layout>
