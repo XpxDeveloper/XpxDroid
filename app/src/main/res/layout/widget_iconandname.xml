@@ -6,7 +6,7 @@
     android:gravity="center"
     android:clickable="false"
     android:layout_margin="0dp"
-    android:background="@color/transparent"
+    android:background="@drawable/gv_selector"
     android:id="@+id/container"
     android:descendantFocusability="blocksDescendants"
     android:padding="5dp">

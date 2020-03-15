@@ -1,8 +1,9 @@
 package com.xpsoft.xpxDroid.adapter.recyclerview;
 
 import android.graphics.Rect;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * Created by XPSoft on 2018/3/27.

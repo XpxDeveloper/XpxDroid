@@ -2,10 +2,12 @@ package com.xpsoft.xpxDroid.tools.dialogs;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
-import android.support.annotation.Nullable;
-import android.support.design.widget.TextInputLayout;
-import android.support.v4.graphics.drawable.DrawableCompat;
+import androidx.annotation.Nullable;
+import androidx.appcompat.widget.DrawableUtils;
+import androidx.core.graphics.drawable.DrawableCompat;
 import android.util.AttributeSet;
+
+import com.google.android.material.textfield.TextInputLayout;
 
 /**
  * Created by XPSoft on 2018/3/27.
@@ -48,7 +50,7 @@ public class DialogTextInputLayout extends TextInputLayout {
         if (editTextBackground == null) {
             return;
         }
-        if (android.support.v7.widget.DrawableUtils.canSafelyMutateDrawable(editTextBackground)) {
+        if (androidx.appcompat.widget.DrawableUtils.canSafelyMutateDrawable(editTextBackground)) {
             editTextBackground = editTextBackground.mutate();
         }
         DrawableCompat.clearColorFilter(editTextBackground);

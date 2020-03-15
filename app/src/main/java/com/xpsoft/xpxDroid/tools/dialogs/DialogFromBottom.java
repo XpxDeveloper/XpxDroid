@@ -1,7 +1,8 @@
 package com.xpsoft.xpxDroid.tools.dialogs;
 
+import android.app.Activity;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -16,8 +17,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.xpsoft.xpxDroid.R;
-import com.xpsoft.xpxDroid.tools.sysUtils;
-import com.xpsoft.xpxDroid.tools.uiUtils;
+import com.xpsoft.xpxDroid.tools.UiUtils;
+import com.xpsoft.xpxDroid.tools.SysUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -80,7 +81,7 @@ public class DialogFromBottom extends DialogBaseImpl {
             public View getView(int position, View convertView, ViewGroup parent) {
                 TextView tv = new TextView(mContext);
                 tv.setText(mList.get(position).getBtnName());
-                tv.setHeight(uiUtils.dp2px(mContext, 50));
+                tv.setHeight(UiUtils.dp2px(mContext, 50));
                 tv.setGravity(Gravity.CENTER);
                 return tv;
             }
@@ -106,22 +107,22 @@ public class DialogFromBottom extends DialogBaseImpl {
         WindowManager.LayoutParams lp = window.getAttributes();
         lp.gravity = Gravity.BOTTOM; // 紧贴底部
         if(withRadius){
-            if(sysUtils.checkDeviceHasNavigationBar(mContext)){
-                lp.y = uiUtils.dp2px(mContext, 65);//与屏幕底部边距
+            if(SysUtils.DeviceHasNavigationBar(mContext)&&SysUtils.isNavBarVisible(mContext,((Activity)mContext).getWindow())){
+                lp.y = UiUtils.dp2px(mContext, 15)+SysUtils.getVirtualBarHeight(mContext);//与屏幕底部边距
             }else {
-                lp.y = uiUtils.dp2px(mContext, 15);//与屏幕底部边距
+                lp.y = UiUtils.dp2px(mContext, 15);//与屏幕底部边距
             }
 //        lp.width = WindowManager.LayoutParams.MATCH_PARENT; // 宽度持平
             WindowManager wm = window.getWindowManager();
-            int width = wm.getDefaultDisplay().getWidth() - uiUtils.dp2px(mContext, 30);
+            int width = wm.getDefaultDisplay().getWidth() - UiUtils.dp2px(mContext, 30);
             window.setLayout(width, WindowManager.LayoutParams.WRAP_CONTENT);//这2行,和上面的一样,注意顺序就行;
 
             window.setAttributes(lp);
         }else {
-            lp.y = uiUtils.dp2px(mContext, 0);//与屏幕底部边距
+            lp.y = UiUtils.dp2px(mContext, 0);//与屏幕底部边距
 //        lp.width = WindowManager.LayoutParams.MATCH_PARENT; // 宽度持平
             WindowManager wm = window.getWindowManager();
-            int width = wm.getDefaultDisplay().getWidth() - uiUtils.dp2px(mContext, 0);
+            int width = wm.getDefaultDisplay().getWidth() - UiUtils.dp2px(mContext, 0);
             window.setLayout(width, WindowManager.LayoutParams.WRAP_CONTENT);//这2行,和上面的一样,注意顺序就行;
 
             window.setAttributes(lp);

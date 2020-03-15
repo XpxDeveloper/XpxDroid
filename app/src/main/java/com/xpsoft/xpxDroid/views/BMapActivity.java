@@ -1,18 +1,10 @@
 package com.xpsoft.xpxDroid.views;
 
-import android.content.Context;
-import android.databinding.DataBindingUtil;
+import androidx.databinding.DataBindingUtil;
 import android.graphics.Bitmap;
-import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.Paint;
-import android.graphics.Typeface;
-import android.graphics.drawable.Drawable;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Message;
-import android.os.SystemClock;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.view.View;
 
 import com.baidu.mapapi.map.BaiduMap;
@@ -32,10 +24,7 @@ import com.xpsoft.xpxDroid.map.bmap.BMapLayerTest;
 import com.xpsoft.xpxDroid.map.bmap.BMapMarkerTest;
 import com.xpsoft.xpxDroid.models.eventbus.xpxEvent;
 import com.xpsoft.xpxDroid.tools.MapTestDataUtils;
-import com.xpsoft.xpxDroid.tools.uiUtils;
 import com.xpsoft.xpxDroid.widget.AppTitleBar;
-
-import java.util.Random;
 
 /**
  * Created by XPSoft on 2018/4/2.

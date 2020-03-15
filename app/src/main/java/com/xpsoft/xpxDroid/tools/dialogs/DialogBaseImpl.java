@@ -2,10 +2,10 @@ package com.xpsoft.xpxDroid.tools.dialogs;
 
 import android.app.Activity;
 import android.content.Context;
-import android.databinding.DataBindingUtil;
+import androidx.databinding.DataBindingUtil;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,7 +15,7 @@ import android.view.WindowManager;
 
 import com.xpsoft.xpxDroid.R;
 import com.xpsoft.xpxDroid.databinding.DialogBaseTest1Binding;
-import com.xpsoft.xpxDroid.tools.uiUtils;
+import com.xpsoft.xpxDroid.tools.UiUtils;
 
 /**
  * Created by XPSoft on 2018/3/26.
@@ -126,8 +126,8 @@ public class DialogBaseImpl extends DialogBase {
         window.setBackgroundDrawableResource(R.color.transparent);
         WindowManager.LayoutParams wlp = window.getAttributes();
         wlp.gravity = Gravity.BOTTOM;
-        wlp.width = uiUtils.dp2px(mContext, dpWidth);
-        wlp.height = uiUtils.dp2px(mContext, dpHeight);
+        wlp.width = UiUtils.dp2px(mContext, dpWidth);
+        wlp.height = UiUtils.dp2px(mContext, dpHeight);
         window.setAttributes(wlp);
     }
 

@@ -1,9 +1,8 @@
 package com.xpsoft.xpxDroid.fragment.lazybase_02;
 
-import android.databinding.DataBindingUtil;
+import androidx.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import com.xpsoft.xpxDroid.widget.ViewPagerCustomScroll;
+import androidx.annotation.Nullable;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,11 +12,7 @@ import com.xpsoft.xpxDroid.R;
 import com.xpsoft.xpxDroid.adapter.baseFragmentAdapter;
 import com.xpsoft.xpxDroid.databinding.FragmentDispatchBinding;
 import com.xpsoft.xpxDroid.fragment.baseFragment;
-import com.xpsoft.xpxDroid.fragment.dispatchChatRoomFragment;
-import com.xpsoft.xpxDroid.fragment.dispatchGroupListFragment;
-import com.xpsoft.xpxDroid.fragment.lazybase_02.lazyFragment;
 import com.xpsoft.xpxDroid.models.eventbus.xpxEvent;
-import com.xpsoft.xpxDroid.tools.WidgetIdUtils;
 
 import java.util.ArrayList;
 import java.util.List;

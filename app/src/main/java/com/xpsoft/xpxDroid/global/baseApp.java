@@ -2,7 +2,6 @@ package com.xpsoft.xpxDroid.global;
 
 import android.app.Application;
 import android.content.Context;
-import android.support.multidex.MultiDex;
 import android.util.Log;
 
 import com.baidu.mapapi.SDKInitializer;
@@ -22,6 +21,8 @@ import com.xpsoft.xpxDroid.tools.ThreadUtils;
 import org.greenrobot.eventbus.EventBus;
 
 import java.io.File;
+
+import androidx.multidex.MultiDex;
 
 /**
  * Created by XPSoft on 2018/2/15.

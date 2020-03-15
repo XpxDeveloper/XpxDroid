@@ -1,8 +1,8 @@
 package com.xpsoft.xpxDroid.tools;
 
 import android.content.Context;
-import android.support.annotation.IntDef;
-import android.support.annotation.StringDef;
+import androidx.annotation.IntDef;
+import androidx.annotation.StringDef;
 import android.util.Log;
 
 import java.lang.annotation.Retention;

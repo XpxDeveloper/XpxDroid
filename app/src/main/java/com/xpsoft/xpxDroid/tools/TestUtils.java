@@ -10,7 +10,7 @@ import java.lang.reflect.Field;
  * Created by XPSoft on 2018/8/29.
  */
 
-public class testUtils {
+public class TestUtils {
     public void test(){
         try {
             Class<?> clz=Class.forName("");

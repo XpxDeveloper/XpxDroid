@@ -1,21 +1,17 @@
 package com.xpsoft.xpxDroid.views;
 
 import android.content.ContentResolver;
-import android.content.ContentUris;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.Color;
-import android.net.Uri;
 import android.os.Bundle;
 import android.provider.ContactsContract;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.text.TextUtils;
 import android.util.Log;
 import android.widget.Toast;
@@ -26,7 +22,6 @@ import com.xpsoft.xpxDroid.adapter.recyclerview.ContactsAdapter;
 import com.xpsoft.xpxDroid.models.Contact;
 import com.xpsoft.xpxDroid.tools.Cn2Spell;
 
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 

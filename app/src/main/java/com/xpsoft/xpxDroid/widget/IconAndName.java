@@ -10,7 +10,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.xpsoft.xpxDroid.R;
-import com.xpsoft.xpxDroid.tools.uiUtils;
+import com.xpsoft.xpxDroid.tools.UiUtils;
 
 
 /**
@@ -64,7 +64,7 @@ public class IconAndName extends FrameLayout implements View.OnClickListener {
         mTV_MemberName = (TextView) layoutView.findViewById(R.id.membername);
         mGroupMemberState = (ImageView) layoutView.findViewById(R.id.memberstate);
         if(mSize>0){
-            LayoutParams params2 = new LayoutParams(uiUtils.dp2px(mContext,mSize), uiUtils.dp2px(mContext,mSize));
+            LayoutParams params2 = new LayoutParams(UiUtils.dp2px(mContext,mSize), UiUtils.dp2px(mContext,mSize));
             mGroupMemberState.setLayoutParams(params2);
         }
 //        mTV_MemberName.setOnClickListener(this);

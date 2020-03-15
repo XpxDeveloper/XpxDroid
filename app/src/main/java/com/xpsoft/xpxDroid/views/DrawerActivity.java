@@ -1,14 +1,15 @@
 package com.xpsoft.xpxDroid.views;
 
-import android.databinding.DataBindingUtil;
+import androidx.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.design.widget.NavigationView;
-import android.support.v4.widget.DrawerLayout;
+import androidx.annotation.Nullable;
+import androidx.drawerlayout.widget.DrawerLayout;
+
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.google.android.material.navigation.NavigationView;
 import com.xpsoft.xpxDroid.R;
 import com.xpsoft.xpxDroid.databinding.ActivityDrawerBinding;
 import com.xpsoft.xpxDroid.widget.AppTitleBar;

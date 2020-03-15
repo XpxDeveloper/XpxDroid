@@ -1,11 +1,10 @@
 package com.xpsoft.xpxDroid.tools.dialogs;
 
 import android.content.Context;
-import android.databinding.DataBindingUtil;
-import android.support.annotation.AttrRes;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.design.widget.TextInputLayout;
+import androidx.databinding.DataBindingUtil;
+import androidx.annotation.AttrRes;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import android.text.InputFilter;
 import android.text.InputType;
 import android.text.TextUtils;
@@ -13,10 +12,11 @@ import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.widget.TextView;
 
+import com.google.android.material.textfield.TextInputLayout;
 import com.xpsoft.xpxDroid.R;
 import com.xpsoft.xpxDroid.databinding.DialogRowEditBinding;
 import com.xpsoft.xpxDroid.tools.EditTextWatcher;
-import com.xpsoft.xpxDroid.tools.uiUtils;
+import com.xpsoft.xpxDroid.tools.UiUtils;
 
 /**
  * Created by XPSoft on 2018/3/27.
@@ -63,7 +63,7 @@ public class DialogRowEdit extends DialogRowBase {
 
     public DialogRowEdit setTvKeyWidth(int dpWidth) {
         if (mBinding != null) {
-            mBinding.tvKey.getLayoutParams().width = uiUtils.dp2px(mContext, dpWidth);
+            mBinding.tvKey.getLayoutParams().width = UiUtils.dp2px(mContext, dpWidth);
             //不能直接通过setWidth()方法设置，这样是无效的，具体的要看源码实现过程
         }
 

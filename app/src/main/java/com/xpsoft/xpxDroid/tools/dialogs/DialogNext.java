@@ -1,20 +1,21 @@
 package com.xpsoft.xpxDroid.tools.dialogs;
 
-import android.databinding.DataBindingUtil;
+import androidx.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.xpsoft.xpxDroid.R;
 import com.xpsoft.xpxDroid.databinding.DialogBaseTest1Binding;
-import com.xpsoft.xpxDroid.tools.uiUtils;
+import com.xpsoft.xpxDroid.tools.UiUtils;
 import com.xpsoft.xpxDroid.widget.MyTextView;
 
 import java.util.ArrayList;
@@ -34,6 +35,8 @@ public class DialogNext extends DialogBaseImpl {
     private String mCustomText = "";
     private boolean mHideHeader;//隐藏默认的标题栏。（改为显示标题到中间内容区域？）
     private boolean mShowHeaderTitleToContent;
+    private boolean mShowHeaderIconToContent;
+    private int mHeaderIconResId =0;
     private boolean mShowSimpleHeader;
 
     //自定义按钮
@@ -53,10 +56,18 @@ public class DialogNext extends DialogBaseImpl {
             mBinding.llContent.addView(mCustomView);
         }else if(!TextUtils.isEmpty(mCustomText)){
             //标题
-            if(mShowHeaderTitleToContent){
+            if(mShowHeaderIconToContent&&mHeaderIconResId>0){
+                ImageView imageView=new ImageView(mContext);
+                imageView.setBackgroundResource(mHeaderIconResId);
+                ViewGroup.LayoutParams lp = new LinearLayout.LayoutParams(UiUtils.dp2px(mContext,45),UiUtils.dp2px(mContext,45));
+                ((LinearLayout.LayoutParams) lp).gravity=Gravity.CENTER;
+                ((LinearLayout.LayoutParams) lp).topMargin=UiUtils.dp2px(mContext,25);
+                imageView.setLayoutParams(lp);
+                mBinding.llContent.addView(imageView);
+            }else if(mShowHeaderTitleToContent){
                 TextView textView=new TextView(mContext);
                 textView.setText(mTitle);
-                textView.setHeight(uiUtils.dp2px(mContext,50));
+                textView.setHeight(UiUtils.dp2px(mContext,50));
                 textView.setGravity(Gravity.CENTER);
                 mBinding.llContent.addView(textView);
             }
@@ -65,18 +76,19 @@ public class DialogNext extends DialogBaseImpl {
             textView.setText(mCustomText);
 //            textView.setPadding(50,60,5,50);
 //            textView.setBackgroundColor(Color.RED);
-            int px1=uiUtils.dp2px(mContext,50);
+            int px1=UiUtils.dp2px(mContext,30);
             textView.setMinHeight(px1);
             textView.setGravity(Gravity.LEFT);
             LinearLayout.LayoutParams lp=new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-            int px2=uiUtils.dp2px(mContext,30);
-            lp.setMargins(px2,60,px2,px2);
+            int px2=UiUtils.dp2px(mContext,30);
+            int px3=UiUtils.dp2px(mContext,20);
+            lp.setMargins(px2,UiUtils.dp2px(mContext,20),px2,px3);
             textView.setLayoutParams(lp);
             mBinding.llContent.addView(textView);
         }
         if(mShowSimpleHeader){
             mBinding.dialogHeader.showSimpleHeader();
-            mBinding.dialogHeader.setLayoutParams(new LinearLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, uiUtils.dp2px(mContext,5)));
+            mBinding.dialogHeader.setLayoutParams(new LinearLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, UiUtils.dp2px(mContext,5)));
             mBinding.dialogHeader.setBackgroundResource(R.drawable.dialog_header_background_radius_lrb);
         }else if(mHideHeader){
             mBinding.dialogHeader.setVisibility(View.GONE);
@@ -120,6 +132,13 @@ public class DialogNext extends DialogBaseImpl {
         mShowHeaderTitleToContent=true;
         return this;
     }
+
+    public DialogNext ShowHeaderIconToContent(int resId) {
+        this.mShowHeaderIconToContent = true;
+        this.mHeaderIconResId =resId;
+        return this;
+    }
+
     public DialogNext showSimpleHeader(){
         mShowSimpleHeader=true;
         return this;

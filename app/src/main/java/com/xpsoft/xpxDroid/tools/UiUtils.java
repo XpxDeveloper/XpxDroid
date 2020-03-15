@@ -1,7 +1,6 @@
 package com.xpsoft.xpxDroid.tools;
 
 import android.content.Context;
-import android.support.design.widget.BaseTransientBottomBar;
 import android.util.TypedValue;
 import android.view.Window;
 import android.view.WindowManager;
@@ -11,7 +10,7 @@ import android.widget.Toast;
  * Created by XPSoft on 2018/2/17.
  */
 
-public class uiUtils {
+public class UiUtils {
     /*public static int Dp2Px(Context _Context, double _dipval)
     {
         float scale=_Context.getResources().getDisplayMetrics().density;

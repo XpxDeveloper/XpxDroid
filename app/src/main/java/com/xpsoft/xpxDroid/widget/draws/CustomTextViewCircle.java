@@ -6,12 +6,12 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
 
 import com.xpsoft.xpxDroid.R;
-import com.xpsoft.xpxDroid.tools.uiUtils;
+import com.xpsoft.xpxDroid.tools.UiUtils;
 
 /**
  * Created by XPSoft on 2018/4/14.
@@ -43,13 +43,13 @@ public class CustomTextViewCircle extends View {
         super(context, attrs, defStyleAttr);
         mContext=context;
         rect=new Rect();
-        DEFAULT_HEIGHT=uiUtils.dp2px(mContext,50);
-        DEFAULT_WIDTH=uiUtils.dp2px(mContext,50);
+        DEFAULT_HEIGHT=UiUtils.dp2px(mContext,50);
+        DEFAULT_WIDTH=UiUtils.dp2px(mContext,50);
         TypedArray typedArray=null;
         mPaint=new Paint();
         try{
             typedArray=mContext.getTheme().obtainStyledAttributes(attrs, R.styleable.CustomView,defStyleAttr,0);
-            mTextSize=typedArray.getDimension(R.styleable.CustomView_xpxTextSize, uiUtils.dp2px(mContext,14));
+            mTextSize=typedArray.getDimension(R.styleable.CustomView_xpxTextSize, UiUtils.dp2px(mContext,14));
             mTextColor=typedArray.getColor(R.styleable.CustomView_xpxColor, Color.BLACK);
             mBackgroundColor=typedArray.getColor(R.styleable.CustomView_xpxBackgroundColor,Color.WHITE);
             mRadius=typedArray.getDimension(R.styleable.CustomView_xpxRadius,0);

@@ -1,12 +1,13 @@
 package com.xpsoft.xpxDroid.views;
 
-import android.databinding.DataBindingUtil;
+import android.content.Intent;
+import androidx.databinding.DataBindingUtil;
 import android.media.AudioFormat;
 import android.media.AudioRecord;
 import android.media.MediaRecorder;
 import android.os.Bundle;
 import android.os.Message;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 import com.xpsoft.xpxDroid.R;
 import com.xpsoft.xpxDroid.adapter.baseFragmentAdapter;
@@ -16,6 +17,7 @@ import com.xpsoft.xpxDroid.fragment.desktopMainFragment;
 import com.xpsoft.xpxDroid.fragment.desktopSecondFragment;
 import com.xpsoft.xpxDroid.fragment.lazybase_01.lazyFragment;
 import com.xpsoft.xpxDroid.models.eventbus.xpxEvent;
+import com.xpsoft.xpxDroid.services.LockScreenService;
 import com.xpsoft.xpxDroid.tools.AsynTaskUtils;
 import com.xpsoft.xpxDroid.widget.ViewPagerIndicator;
 
@@ -37,6 +39,7 @@ public class DeskTopActivity extends baseFragActivity {
     private AudioRecord record;
     private AudioRecord record2;
 
+
     @Override
     public void XpxEvent(xpxEvent _xpxEvent) {
 
@@ -57,9 +60,17 @@ public class DeskTopActivity extends baseFragActivity {
     }
 
     @Override
+    protected void onPause() {
+        super.onPause();
+        Intent startIntent = new Intent(this, LockScreenService.class);
+        startService(startIntent);
+    }
+
+    @Override
     protected void onDestroy() {
         super.onDestroy();
         AsynTaskUtils.getInstance().clearAllTask();
+
     }
     private  void useless(){
         try{

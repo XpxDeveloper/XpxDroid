@@ -6,10 +6,12 @@ import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.graphics.Point;
 import android.graphics.Rect;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
+import android.util.DisplayMetrics;
 import android.view.Display;
 import android.view.View;
 import android.view.Window;
+import android.view.WindowManager;
 
 import java.lang.reflect.Method;
 
@@ -17,7 +19,7 @@ import java.lang.reflect.Method;
  * Created by XPSoft on 2018/5/24.
  */
 
-public class sysUtils {
+public class SysUtils {
     public static String convertSecond2Desc(int second){
         if(second<0){
             return "秒数错误,应当不小于0";
@@ -39,7 +41,7 @@ public class sysUtils {
         return String.valueOf(second)+"秒";
     }
     //获取是否存在NavigationBar,判断是否有虚拟键盘
-    public static boolean checkDeviceHasNavigationBar(Context context) {
+    public static boolean DeviceHasNavigationBar(Context context) {
         boolean hasNavigationBar = false;
         Resources rs = context.getResources();
         int id = rs.getIdentifier("config_showNavigationBar", "bool", "android");
@@ -66,7 +68,7 @@ public class sysUtils {
      * @param window  当前窗口
      * @return true(显示虚拟导航栏)，false(不显示或不支持虚拟导航栏)
      */
-    public static boolean checkNavigationBarShow(@NonNull Context context, @NonNull Window window) {
+    public static boolean isNavBarVisible(@NonNull Context context, @NonNull Window window) {
         boolean show;
         Display display = window.getWindowManager().getDefaultDisplay();
         Point point = new Point();
@@ -83,6 +85,28 @@ public class sysUtils {
             show = (rect.bottom != point.y);
         }
         return show;
+    }
+    /**
+     * 获取虚拟功能键高度
+     * @param context
+     * @return
+     */
+    public static int getVirtualBarHeight(Context context) {
+        int vh = 0;
+        WindowManager windowManager = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+        Display display = windowManager.getDefaultDisplay();
+        DisplayMetrics dm = new DisplayMetrics();
+        try {
+            @SuppressWarnings("rawtypes")
+            Class c = Class.forName("android.view.Display");
+            @SuppressWarnings("unchecked")
+            Method method = c.getMethod("getRealMetrics", DisplayMetrics.class);
+            method.invoke(display, dm);
+            vh = dm.heightPixels - windowManager.getDefaultDisplay().getHeight();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return vh;
     }
     public static void actionStartActivity(Context _context, Class<?> _class) {
         Intent t = new Intent(_context, _class);

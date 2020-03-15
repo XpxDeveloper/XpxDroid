@@ -1,7 +1,7 @@
 package com.xpsoft.xpxDroid.tools.dialogs;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.xpsoft.xpxDroid.R;
-import com.xpsoft.xpxDroid.tools.sysUtils;
+import com.xpsoft.xpxDroid.tools.SysUtils;
 
 /**
  * Created by XPSoft on 2018/3/30.
@@ -64,11 +64,11 @@ public class DialogWait extends DialogBaseImpl {
     }
     public void setProgess(int progess){
         mProgess=progess;
-        tvMsg.setText(mTitle+"("+ sysUtils.convertSecond2Desc(progess)+")");
+        tvMsg.setText(mTitle+"("+ SysUtils.convertSecond2Desc(progess)+")");
     }
     public void setTitle(String title){
         mTitle=title;
-        tvMsg.setText(mTitle+"("+ sysUtils.convertSecond2Desc(mProgess)+")");
+        tvMsg.setText(mTitle+"("+ SysUtils.convertSecond2Desc(mProgess)+")");
     }
     public interface WaitListener{
         void execute(DialogWait _dialogWait);

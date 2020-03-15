@@ -2,12 +2,11 @@ package com.xpsoft.xpxDroid.views.searchviews;
 
 import android.os.Bundle;
 import android.os.Message;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.Toolbar;
-import android.view.Gravity;
+import androidx.annotation.Nullable;
+import androidx.appcompat.widget.Toolbar;
+
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.TextView;
 
 import com.xpsoft.xpxDroid.R;
 import com.xpsoft.xpxDroid.models.eventbus.xpxEvent;

@@ -1,12 +1,9 @@
 package com.xpsoft.xpxDroid.models.eventbus;
 
-import android.support.annotation.IntDef;
-import android.view.ViewDebug;
+import androidx.annotation.IntDef;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
-
-import static com.xpsoft.xpxDroid.models.eventbus.xpxEvent.XPX_EVENT_TYPE1;
 
 /**
  * Created by XPSoft on 2018/2/11.

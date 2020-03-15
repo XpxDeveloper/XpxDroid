@@ -1,11 +1,12 @@
 package com.xpsoft.xpxDroid.tools.dialogs;
 
 import android.content.Context;
-import android.support.annotation.AttrRes;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.AttrRes;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,7 +15,7 @@ import android.widget.TextView;
 import com.xpsoft.xpxDroid.R;
 import com.xpsoft.xpxDroid.adapter.recyclerview.DialogBaseSelectAdapter;
 import com.xpsoft.xpxDroid.adapter.recyclerview.dispatchgrouplistAdapter;
-import com.xpsoft.xpxDroid.tools.uiUtils;
+import com.xpsoft.xpxDroid.tools.UiUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -105,7 +106,7 @@ public class DialogRowSelect extends DialogRowBase {
     }
     public DialogRowSelect setTvKeyWidth(int dpWidth){
         if(tvKey!=null){
-            tvKey.getLayoutParams().width= uiUtils.dp2px(mContext,dpWidth);
+            tvKey.getLayoutParams().width= UiUtils.dp2px(mContext,dpWidth);
             //不能直接通过setWidth()方法设置，这样是无效的，具体的要看源码实现过程
         }
 

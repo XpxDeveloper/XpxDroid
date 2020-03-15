@@ -5,13 +5,14 @@ import android.app.Dialog;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Rect;
-import android.support.v4.app.DialogFragment;
-import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewTreeObserver;
 import android.view.WindowManager;
 import android.widget.RelativeLayout;
+
+import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.FragmentManager;
 
 import com.xpsoft.xpxDroid.R;
 import com.xpsoft.xpxDroid.tools.dialogs.DialogBase;
@@ -22,7 +23,7 @@ import com.xpsoft.xpxDroid.tools.showLargePhoto.DragImageView;
  * Created by XPSoft on 2018/5/10.
  */
 
-public class dialogUtils {
+public class DialogUtils {
     public static void dialogConfirm(FragmentManager fm, String msg, DialogBase.FootClickListener left, DialogBase.FootClickListener right) {
         DialogNext dialog = new DialogNext();
         dialog.setHeaderTitle("提示");
@@ -140,8 +141,8 @@ public class dialogUtils {
         int screenWidth = wm.getDefaultDisplay().getWidth();
         int screenHeight = wm.getDefaultDisplay().getHeight();
 
-        int ContentWidth = (int)uiUtils.dp2px(context, 1000);
-        int ContentHeight = (int)  uiUtils.dp2px(context, 700);
+        int ContentWidth = (int)UiUtils.dp2px(context, 1000);
+        int ContentHeight = (int)  UiUtils.dp2px(context, 700);
 
         WindowManager.LayoutParams lp = dialog.getWindow()
                 .getAttributes();

@@ -15,7 +15,7 @@
             android:background="@color/green"
             android:layout_height="40dp"></com..xpsoft.xpxDroid.widget.AppTitleBar>-->
 
-        <android.support.design.widget.TabLayout
+        <com.google.android.material.tabs.TabLayout
             android:id="@+id/mTabLayout"
             android:layout_width="match_parent"
             android:layout_height="40dp"
@@ -24,7 +24,7 @@
             app:tabIndicatorColor="@color/yellow"
             app:tabBackground="@color/red"
             android:background="@color/green"
-            ></android.support.design.widget.TabLayout>
+            ></com.google.android.material.tabs.TabLayout>
 
         <com.xpsoft.xpxDroid.widget.ViewPagerCustomScroll
             android:layout_below="@id/mTabLayout"

@@ -1,19 +1,14 @@
 package com.xpsoft.xpxDroid.widget;
 
 import android.content.Context;
-import android.databinding.DataBindingUtil;
-import android.support.annotation.AttrRes;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.annotation.StyleRes;
+import androidx.databinding.DataBindingUtil;
+import androidx.annotation.AttrRes;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.FrameLayout;
-import android.widget.ImageButton;
-import android.widget.LinearLayout;
-import android.widget.TextView;
-
 import com.xpsoft.xpxDroid.R;
 import com.xpsoft.xpxDroid.databinding.WidgetApptitlebarBinding;
 
@@ -25,7 +20,6 @@ public class AppTitleBar extends FrameLayout  implements View.OnClickListener{
 
     private Context mContext;
     private WidgetApptitlebarBinding mBinding;
-    private LayoutInflater mInflater;
 
     private OnTitleBarClickListener mOnTitleBarClickListener;
     private OnTitleBarRightClickListener mOnTitleBarRightClickListener;
@@ -45,7 +39,7 @@ public class AppTitleBar extends FrameLayout  implements View.OnClickListener{
     }
     private void initView(){
         if(isInEditMode())return;
-        mInflater= (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        LayoutInflater mInflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         mBinding= DataBindingUtil.inflate(mInflater,R.layout.widget_apptitlebar,null,false);
         mBinding.tvTitle.setOnClickListener(this);
         mBinding.ibtnBack.setOnClickListener(this);

@@ -4,9 +4,10 @@ import android.app.Dialog;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Message;
-import android.support.annotation.Nullable;
-import android.support.v4.app.DialogFragment;
-import android.support.v4.app.FragmentTransaction;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.FragmentTransaction;
+
 import android.util.Log;
 import android.view.View;
 
@@ -14,7 +15,8 @@ import com.xpsoft.xpxDroid.R;
 import com.xpsoft.xpxDroid.models.eventbus.xpxEvent;
 import com.xpsoft.xpxDroid.tools.AsynTaskUtils;
 import com.xpsoft.xpxDroid.tools.BitmapUtils;
-import com.xpsoft.xpxDroid.tools.dialogUtils;
+import com.xpsoft.xpxDroid.tools.DialogUtils;
+import com.xpsoft.xpxDroid.tools.UiUtils;
 import com.xpsoft.xpxDroid.tools.dialogs.DialogBase;
 import com.xpsoft.xpxDroid.tools.dialogs.DialogBaseRecycleSelectModel;
 import com.xpsoft.xpxDroid.tools.dialogs.DialogFromBottom;
@@ -114,14 +116,57 @@ public class DialogActivity extends baseFragActivity {
             case R.id.btn16:
                 dialogShowGrid();
                 break;
+            case R.id.btn17:
+                dialogShowWithIcon();
+                break;
 
         }
     }
 
+    private void dialogShowWithIcon() {
+        DialogNext dialog = new DialogNext();
+        dialog.hideHeader().ShowHeaderIconToContent(R.drawable.ic_avatar).setWidth(UiUtils.dp2px(mContext,300));
+        dialog.setCustomText("吃饭了吗？吃饭了吗？吃饭了吗？吃饭了吗？吃饭了吗？吃饭了吗？")
+                .addCustomBtn("取消", new DialogBase.FootClickListener() {
+                    @Override
+                    public void click(DialogFragment dialog, View view) {
+                        dialog.dismiss();
+                    }
+                }).addCustomBtn("确定", new DialogBase.FootClickListener() {
+            @Override
+            public void click(DialogFragment dialog, View view) {
+                dialog.dismiss();
+            }
+        });
+        dialog.show(getSupportFragmentManager(), "dn");
+        dialog.setCancelable(false);
+    }
+
+
     private void dialogShowGrid() {
-        DialogGrid dialogGrid=new DialogGrid();
-        dialogGrid.show(getSupportFragmentManager(), "dn");
-        dialogGrid.setCancelable(false);
+        DialogGrid dialog=new DialogGrid();
+        dialog.setWithRadius(false);
+        dialog.addCustomBtn("菜单1",R.drawable.jc_volume_icon ,new DialogBase.FootClickListener() {
+            @Override
+            public void click(DialogFragment dialog, View view) {
+
+            }
+        }).addCustomBtn("菜单2",R.drawable.jc_volume_icon , new DialogBase.FootClickListener() {
+            @Override
+            public void click(DialogFragment dialog, View view) {
+
+            }
+        }).addCustomBtn("菜单3", R.drawable.jc_volume_icon ,new DialogBase.FootClickListener() {
+            @Override
+            public void click(DialogFragment dialog, View view) {
+
+            }
+        });
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+        dialog.show(ft, "dg");
+        dialog.setCancelable(true);
+        dialog.setStyle(DialogFragment.STYLE_NO_TITLE, R.style.BottomDialog);
     }
 
     private void dialogConfirm() {
@@ -238,7 +283,7 @@ public class DialogActivity extends baseFragActivity {
     private Dialog mShowLargePictureDialog;
     private void dialogShowLargePicture(){
         Bitmap bitmap= BitmapUtils.ReadBitmapById(mContext,R.drawable.demo_background);
-        mShowLargePictureDialog=dialogUtils.showLargePicture(mShowLargePictureDialog,mLayoutInflater,mContext,bitmap,true);
+        mShowLargePictureDialog=DialogUtils.showLargePicture(mShowLargePictureDialog,mLayoutInflater,mContext,bitmap,true);
     }
 
     private void dialogWaiting() {

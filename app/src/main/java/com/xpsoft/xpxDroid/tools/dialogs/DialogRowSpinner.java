@@ -1,9 +1,9 @@
 package com.xpsoft.xpxDroid.tools.dialogs;
 
 import android.content.Context;
-import android.support.annotation.AttrRes;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.AttrRes;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,7 +14,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.xpsoft.xpxDroid.R;
-import com.xpsoft.xpxDroid.tools.uiUtils;
+import com.xpsoft.xpxDroid.tools.UiUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -67,7 +67,7 @@ public class DialogRowSpinner extends DialogRowBase {
             public void onItemSelected(AdapterView<?> parent, View view,
                                        int pos, long id) {
 
-                uiUtils.showToastShort(mContext,"你点击的是:"+mList.get(pos));
+                UiUtils.showToastShort(mContext,"你点击的是:"+mList.get(pos));
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {

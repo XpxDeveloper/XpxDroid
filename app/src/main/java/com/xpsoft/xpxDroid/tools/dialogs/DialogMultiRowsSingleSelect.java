@@ -2,10 +2,10 @@ package com.xpsoft.xpxDroid.tools.dialogs;
 
 import android.app.Activity;
 import android.content.Context;
-import android.databinding.DataBindingUtil;
+import androidx.databinding.DataBindingUtil;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,7 +17,7 @@ import android.widget.ScrollView;
 
 import com.xpsoft.xpxDroid.R;
 import com.xpsoft.xpxDroid.databinding.DialogMultirowsSingleselectBinding;
-import com.xpsoft.xpxDroid.tools.uiUtils;
+import com.xpsoft.xpxDroid.tools.UiUtils;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -94,7 +94,7 @@ public class DialogMultiRowsSingleSelect extends DialogBaseImpl {
         vto.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
             public void onGlobalLayout() {
                 int height = llContent.getHeight();
-                int screenHeight = uiUtils.getScreen(window).height;
+                int screenHeight = UiUtils.getScreen(window).height;
                 Log.i(TAG, "onGlobalLayout: " + height + "，" + screenHeight);
                 if (height > screenHeight) {
                     //这里的2种写法都可以
@@ -152,7 +152,7 @@ public class DialogMultiRowsSingleSelect extends DialogBaseImpl {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         final Window window = getDialog().getWindow();
-        Log.i(TAG, "onCreateView: " + llContent.getMeasuredHeight() + "，" + uiUtils.getScreen(window).height);
+        Log.i(TAG, "onCreateView: " + llContent.getMeasuredHeight() + "，" + UiUtils.getScreen(window).height);
     }
 
 

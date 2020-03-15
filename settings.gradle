@@ -1,1 +1,1 @@
-include ':app', ':xpxdroidbase'
+include ':app', ':xpxdroidbase', ':xpxpopup'

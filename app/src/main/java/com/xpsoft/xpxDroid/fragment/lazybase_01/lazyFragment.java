@@ -1,10 +1,7 @@
 package com.xpsoft.xpxDroid.fragment.lazybase_01;
 
-import android.app.Activity;
-import android.content.Context;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.FragmentManager;
+import androidx.annotation.Nullable;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,7 +12,6 @@ import com.xpsoft.xpxDroid.R;
 import com.xpsoft.xpxDroid.fragment.baseFragment;
 import com.xpsoft.xpxDroid.models.eventbus.xpxEvent;
 import com.xpsoft.xpxDroid.tools.WidgetIdUtils;
-import com.xpsoft.xpxDroid.widget.ViewPagerCustomScroll;
 
 /**
  * Created by XPSoft on 2018/2/9.

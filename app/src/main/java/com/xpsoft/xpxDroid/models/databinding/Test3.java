@@ -1,7 +1,7 @@
 package com.xpsoft.xpxDroid.models.databinding;
 
-import android.databinding.BaseObservable;
-import android.databinding.Bindable;
+import androidx.databinding.BaseObservable;
+import androidx.databinding.Bindable;
 import android.util.Log;
 
 import com.xpsoft.xpxDroid.BR;

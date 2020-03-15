@@ -2,12 +2,13 @@ package com.xpsoft.xpxDroid.tools.dialogs;
 
 import android.app.Activity;
 import android.content.Context;
-import android.databinding.DataBindingUtil;
+import androidx.databinding.DataBindingUtil;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.DialogFragment;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.DialogFragment;
+
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -18,7 +19,7 @@ import android.view.WindowManager;
 
 import com.xpsoft.xpxDroid.R;
 import com.xpsoft.xpxDroid.databinding.DialogBaseTest1Binding;
-import com.xpsoft.xpxDroid.tools.uiUtils;
+import com.xpsoft.xpxDroid.tools.UiUtils;
 
 import java.util.List;
 
@@ -34,6 +35,7 @@ public abstract class DialogBase extends DialogFragment {
     protected String mTitle="";
     private DialogBaseTest1Binding mBinding;
     protected int mMarginWidth;//水平跟屏幕的间距,是2边间距的总和
+    protected int mWidth;
     protected DialogBase mSelf;
     protected boolean mFullSreen;//是否设置全屏显示，如果true，则mDpWidth、mDpHeight就没用了
 
@@ -80,6 +82,9 @@ public abstract class DialogBase extends DialogFragment {
         if (mFullSreen) {
             window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));//注意此处
             window.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT);//这2行,和上面的一样,注意顺序就行;
+        }else if(mWidth>0){
+            window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));//注意此处
+            window.setLayout(mWidth, WindowManager.LayoutParams.WRAP_CONTENT);//这2行,和上面的一样,注意顺序就行;
         } else if (mMarginWidth > 0) {
             window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));//注意此处
             WindowManager.LayoutParams wlp = window.getAttributes();
@@ -91,9 +96,9 @@ public abstract class DialogBase extends DialogFragment {
             window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));//注意此处
             WindowManager.LayoutParams wlp = window.getAttributes();
             WindowManager wm=window.getWindowManager();
-            int width=wm.getDefaultDisplay().getWidth()- uiUtils.dp2px(mContext, 30);
+            int width=wm.getDefaultDisplay().getWidth()- UiUtils.dp2px(mContext, 30);
             window.setLayout(width, WindowManager.LayoutParams.WRAP_CONTENT);//这2行,和上面的一样,注意顺序就行;
-            Log.i(TAG, "onActivityCreated: "+wlp.width+"，"+uiUtils.dp2px(mContext, 30));
+            Log.i(TAG, "onActivityCreated: "+wlp.width+"，"+UiUtils.dp2px(mContext, 30));
         }
 
     }
@@ -133,6 +138,11 @@ public abstract class DialogBase extends DialogFragment {
         return this;
     }
 
+    public DialogBase setWidth(int width) {
+        this.mWidth = width;
+        return this;
+    }
+
     public void setFullScreen() {
         mFullSreen = true;
         return;
@@ -152,8 +162,8 @@ public abstract class DialogBase extends DialogFragment {
         window.setBackgroundDrawableResource(R.color.transparent);
         WindowManager.LayoutParams wlp = window.getAttributes();
         wlp.gravity = Gravity.BOTTOM;
-        wlp.width = uiUtils.dp2px(mContext, dpWidth);
-        wlp.height = uiUtils.dp2px(mContext, dpHeight);
+        wlp.width = UiUtils.dp2px(mContext, dpWidth);
+        wlp.height = UiUtils.dp2px(mContext, dpHeight);
         window.setAttributes(wlp);
     }
     public interface Listener {
@@ -163,11 +173,12 @@ public abstract class DialogBase extends DialogFragment {
     public abstract void setListener(Listener _Listener);
 
     public interface FootClickListener {
-        void click(DialogFragment dialog,View view);
+        void click(DialogFragment dialog, View view);
     }
     public static class customBtn {
         private DialogFragment dialogFragment;
         private String btnName = "";
+        private int ResId=0;//资源
         private FootClickListener listener;
 
         public customBtn(DialogFragment dialogFragment,String btnName, FootClickListener listener) {
@@ -175,9 +186,23 @@ public abstract class DialogBase extends DialogFragment {
             this.btnName = btnName;
             this.listener = listener;
         }
+        public customBtn(DialogFragment dialogFragment,String btnName,int resId, FootClickListener listener) {
+            this.dialogFragment=dialogFragment;
+            this.btnName = btnName;
+            this.ResId=resId;
+            this.listener = listener;
+        }
 
         public String getBtnName() {
             return btnName;
+        }
+
+        public int getResId() {
+            return ResId;
+        }
+
+        public void setResId(int resId) {
+            ResId = resId;
         }
 
         public void setBtnName(String btnName) {

@@ -1,7 +1,7 @@
 package com.xpsoft.xpxDroid.views;
 
 import android.content.pm.PackageManager;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 /**
  * Created by XPSoft on 2018/4/16.

@@ -1,12 +1,10 @@
 package com.xpsoft.xpxDroid.views.gdmap;
 
-import android.app.Activity;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.os.Message;
-import android.provider.SyncStateContract;
-import android.support.annotation.Nullable;
+
+import androidx.annotation.Nullable;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,14 +21,10 @@ import com.amap.api.maps.model.CameraPosition;
 import com.amap.api.maps.model.LatLng;
 import com.amap.api.maps.model.Marker;
 import com.amap.api.maps.model.MarkerOptions;
-import com.baidu.mapapi.map.MapStatus;
-import com.baidu.mapapi.map.MapStatusUpdateFactory;
 import com.xpsoft.xpxDroid.R;
-import com.xpsoft.xpxDroid.map.bmap.BMapMarkerTest;
 import com.xpsoft.xpxDroid.map.gdmap.GDMapMarkerTest;
 import com.xpsoft.xpxDroid.models.eventbus.xpxEvent;
 import com.xpsoft.xpxDroid.tools.MapTestDataUtils;
-import com.xpsoft.xpxDroid.views.baseActivity;
 import com.xpsoft.xpxDroid.views.baseFragActivity;
 import com.xpsoft.xpxDroid.widget.AppTitleBar;
 

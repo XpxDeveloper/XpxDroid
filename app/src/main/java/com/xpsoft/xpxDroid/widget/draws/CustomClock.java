@@ -5,12 +5,12 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.DashPathEffect;
 import android.graphics.Paint;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.text.TextPaint;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.xpsoft.xpxDroid.tools.uiUtils;
+import com.xpsoft.xpxDroid.tools.UiUtils;
 
 /**
  * Created by XPSoft on 2018/4/16.
@@ -41,8 +41,8 @@ public class CustomClock extends View {
     }
 
     private void init() {
-        DEFAULT_HEIGHT = uiUtils.dp2px(mContext, 50);
-        DEFAULT_WIDTH = uiUtils.dp2px(mContext, 50);
+        DEFAULT_HEIGHT = UiUtils.dp2px(mContext, 50);
+        DEFAULT_WIDTH = UiUtils.dp2px(mContext, 50);
         mPaintCircle5Min = new Paint();
         mPaintCircle1Min=new Paint();
         mTextPaint=new TextPaint();

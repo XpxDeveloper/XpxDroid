@@ -1,8 +1,8 @@
 package com.xpsoft.xpxDroid.fragment;
 
-import android.databinding.DataBindingUtil;
+import androidx.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,7 +15,7 @@ import com.xpsoft.xpxDroid.fragment.lazybase_01.lazyFragment;
 import com.xpsoft.xpxDroid.models.eventbus.xpxEvent;
 import com.xpsoft.xpxDroid.tools.ShareUtils;
 import com.xpsoft.xpxDroid.tools.WidgetIdUtils;
-import com.xpsoft.xpxDroid.tools.sysUtils;
+import com.xpsoft.xpxDroid.tools.SysUtils;
 import com.xpsoft.xpxDroid.views.AppBarLayoutActivity;
 import com.xpsoft.xpxDroid.views.IM2_0Activity;
 import com.xpsoft.xpxDroid.views.AnimateActivity;
@@ -35,9 +35,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import cn.sharesdk.sina.weibo.SinaWeibo;
 import cn.sharesdk.tencent.qq.QQ;
-import cn.sharesdk.wechat.friends.Wechat;
 
 /**
  * Created by XPSoft on 2018/2/11.
@@ -114,7 +112,7 @@ public class desktopSecondFragment extends lazyFragment {
                 }else if(position==11){
                     SearchActivity.actionStartActivity(mContext,SearchActivity.class);
                 }else if(position==12){
-                    sysUtils.actionStartActivity(mContext,gdmapActivity.class);
+                    SysUtils.actionStartActivity(mContext,gdmapActivity.class);
                 }else if(position==13){
                     ClusterDemoActivity.actionStartActivity(mContext,ClusterDemoActivity.class);
                 }else if(position==14){

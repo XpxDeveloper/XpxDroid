@@ -12,7 +12,7 @@ import android.util.AttributeSet;
  * Created by XPSoft on 2018/7/18.
  */
 
-public class MyTextView extends android.support.v7.widget.AppCompatTextView {
+public class MyTextView extends androidx.appcompat.widget.AppCompatTextView {
 
     private int mLineY;
     private int mViewWidth;

@@ -1,10 +1,10 @@
 package com.xpsoft.xpxDroid.views;
 
 import android.content.res.Configuration;
-import android.databinding.DataBindingUtil;
+import androidx.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.os.Message;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.util.Log;
 import android.view.Window;
 
@@ -13,7 +13,6 @@ import com.xpsoft.xpxDroid.R;
 import com.xpsoft.xpxDroid.adapter.baseFragmentAdapter;
 import com.xpsoft.xpxDroid.databinding.ActivityMainBinding;
 import com.xpsoft.xpxDroid.fragment.baseFragment;
-import com.xpsoft.xpxDroid.fragment.dispatchFragment;
 import com.xpsoft.xpxDroid.fragment.lazybase_02.desktopSecond_02_Fragment;
 import com.xpsoft.xpxDroid.fragment.lazybase_02.dispatch_02_Fragment;
 import com.xpsoft.xpxDroid.global.baseApp;
