@@ -5,7 +5,7 @@ import android.content.Context;
 import android.util.Log;
 
 import com.baidu.mapapi.SDKInitializer;
-import com.mob.MobSDK;
+//import com.mob.MobSDK;
 import com.nostra13.universalimageloader.cache.disc.impl.UnlimitedDiscCache;
 import com.nostra13.universalimageloader.cache.memory.impl.LruMemoryCache;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
@@ -43,7 +43,7 @@ public class baseApp extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        MobSDK.init(this);
+//        MobSDK.init(this);
         refWatcher = setupLeakCanary();
         bus = new EventBus();
         ThreadUtils.clearAll();

@@ -9,11 +9,11 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.util.HashMap;
 
-import cn.sharesdk.framework.Platform;
-import cn.sharesdk.framework.PlatformActionListener;
-import cn.sharesdk.framework.ShareSDK;
-import cn.sharesdk.onekeyshare.OnekeyShare;
-import cn.sharesdk.sina.weibo.SinaWeibo;
+//import cn.sharesdk.framework.Platform;
+//import cn.sharesdk.framework.PlatformActionListener;
+//import cn.sharesdk.framework.ShareSDK;
+//import cn.sharesdk.onekeyshare.OnekeyShare;
+//import cn.sharesdk.sina.weibo.SinaWeibo;
 
 /**
  * Created by XPSoft on 2018/6/28.
@@ -21,26 +21,26 @@ import cn.sharesdk.sina.weibo.SinaWeibo;
 
 public class ShareUtils {
     public static void showShare(Context context) {
-        OnekeyShare oks = new OnekeyShare();
-        //关闭sso授权
-        oks.disableSSOWhenAuthorize();
-
-        // title标题，微信、QQ和QQ空间等平台使用
-        oks.setTitle("test");
-        // titleUrl QQ和QQ空间跳转链接
-        oks.setTitleUrl("http://sharesdk.cn");
-        // text是分享文本，所有平台都需要这个字段
-        oks.setText("我是分享文本");
-        // imagePath是图片的本地路径，Linked-In以外的平台都支持此参数
-        oks.setImagePath("/sdcard/test.jpg");//确保SDcard下面存在此张图片
-        // url在微信、微博，Facebook等平台中使用
-        oks.setUrl("http://sharesdk.cn");
-        // comment是我对这条分享的评论，仅在人人网使用
-        oks.setComment("我是测试评论文本");
-        // 启动分享GUI
-        oks.show(context);
+//        OnekeyShare oks = new OnekeyShare();
+//        //关闭sso授权
+//        oks.disableSSOWhenAuthorize();
+//
+//        // title标题，微信、QQ和QQ空间等平台使用
+//        oks.setTitle("test");
+//        // titleUrl QQ和QQ空间跳转链接
+//        oks.setTitleUrl("http://sharesdk.cn");
+//        // text是分享文本，所有平台都需要这个字段
+//        oks.setText("我是分享文本");
+//        // imagePath是图片的本地路径，Linked-In以外的平台都支持此参数
+//        oks.setImagePath("/sdcard/test.jpg");//确保SDcard下面存在此张图片
+//        // url在微信、微博，Facebook等平台中使用
+//        oks.setUrl("http://sharesdk.cn");
+//        // comment是我对这条分享的评论，仅在人人网使用
+//        oks.setComment("我是测试评论文本");
+//        // 启动分享GUI
+//        oks.show(context);
     }
-    public static final String Platform_SinaWeibo = SinaWeibo.NAME;
+//    public static final String Platform_SinaWeibo = SinaWeibo.NAME;
 
     @StringDef({""})
     @Retention(RetentionPolicy.CLASS)
@@ -48,7 +48,7 @@ public class ShareUtils {
 
     }
     public static void shareLogin(String name) {
-        Platform weibo = ShareSDK.getPlatform(name);
+        /*Platform weibo = ShareSDK.getPlatform(name);
         //回调信息，可以在这里获取基本的授权返回的信息，但是注意如果做提示和UI操作要传到主线程handler里去执行
         weibo.setPlatformActionListener(new PlatformActionListener() {
 
@@ -82,6 +82,6 @@ public class ShareUtils {
         weibo.authorize();//要功能不要数据，在监听oncomplete中不会返回用户数据
 
         //想要移除授权状态，在想移除的地方执行下面的方法即可
-        //weibo.removeAccount(true);
+        //weibo.removeAccount(true);*/
     }
 }

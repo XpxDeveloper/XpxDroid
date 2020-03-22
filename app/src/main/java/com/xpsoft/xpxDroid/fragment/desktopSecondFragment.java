@@ -35,7 +35,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import cn.sharesdk.tencent.qq.QQ;
+//import cn.sharesdk.tencent.qq.QQ;
 
 /**
  * Created by XPSoft on 2018/2/11.
@@ -104,7 +104,7 @@ public class desktopSecondFragment extends lazyFragment {
                 }else if(position==8){
 //                    ShareUtils.shareLogin(SinaWeibo.NAME);
 //                    ShareUtils.shareLogin(Wechat.NAME);
-                    ShareUtils.shareLogin(QQ.NAME);
+//                    ShareUtils.shareLogin(QQ.NAME);
                 }else if(position==9){
                     MarkerClusterDemo.actionStartActivity(mContext,MarkerClusterDemo.class);
                 }else if(position==10){
