@@ -31,11 +31,11 @@
             android:gravity="center"
             ></GridView>-->
 
-        <com.xpsoft.xpxDroid.widget.ViewPagerCustomScroll
+        <com.xpxcoder.xpxDroid.widget.ViewPagerCustomScroll
             android:id="@+id/ViewPager"
             android:paddingBottom="30dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"></com.xpsoft.xpxDroid.widget.ViewPagerCustomScroll>
+            android:layout_height="wrap_content"></com.xpxcoder.xpxDroid.widget.ViewPagerCustomScroll>
         <LinearLayout
             android:orientation="horizontal"
             android:id="@+id/ll"

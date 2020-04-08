@@ -13,8 +13,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 
-import com.xpsoft.xpxDroid.R;
-import com.xpsoft.xpxDroid.databinding.DialogBaseHeaderBinding;
+import com.xpxcoder.xpxDroid.R;
+import com.xpxcoder.xpxDroid.databinding.DialogBaseHeaderBinding;
 
 /**
  * Created by XPSoft on 2018/3/26.

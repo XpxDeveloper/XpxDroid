@@ -7,30 +7,30 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <com.xpsoft.xpxDroid.widget.AppTitleBar
+        <com.xpxcoder.xpxDroid.widget.AppTitleBar
             android:id="@+id/appTitleBar"
             android:layout_width="match_parent"
-            android:layout_height="40dp"></com.xpsoft.xpxDroid.widget.AppTitleBar>
+            android:layout_height="40dp"></com.xpxcoder.xpxDroid.widget.AppTitleBar>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             >
-            <com.xpsoft.xpxDroid.widget.draws.CustomTextViewCircle
+            <com.xpxcoder.xpxDroid.widget.draws.CustomTextViewCircle
                 android:id="@+id/circle"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 app:xpxBackgroundColor="@color/red"
                 app:xpxColor="@color/black"
                 app:xpxText="asdfasdf"
-                app:xpxTextSize="20dp"></com.xpsoft.xpxDroid.widget.draws.CustomTextViewCircle>
-            <com.xpsoft.xpxDroid.widget.draws.CustomClock
+                app:xpxTextSize="20dp"></com.xpxcoder.xpxDroid.widget.draws.CustomTextViewCircle>
+            <com.xpxcoder.xpxDroid.widget.draws.CustomClock
                 android:id="@+id/clock"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
                 android:padding="10dp"
-                ></com.xpsoft.xpxDroid.widget.draws.CustomClock>
+                ></com.xpxcoder.xpxDroid.widget.draws.CustomClock>
 
         </LinearLayout>
         <ImageView

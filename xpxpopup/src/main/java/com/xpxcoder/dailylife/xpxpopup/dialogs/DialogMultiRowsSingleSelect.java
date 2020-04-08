@@ -16,9 +16,9 @@ import android.widget.ScrollView;
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 
-import com.xpsoft.xpxDroid.R;
-import com.xpsoft.xpxDroid.databinding.DialogMultirowsSingleselectBinding;
-import com.xpsoft.xpxDroid.tools.UiUtils;
+import com.xpxcoder.xpxDroid.R;
+import com.xpxcoder.xpxDroid.databinding.DialogMultirowsSingleselectBinding;
+import com.xpxcoder.xpxDroid.tools.UiUtils;
 
 import java.util.ArrayList;
 import java.util.HashMap;

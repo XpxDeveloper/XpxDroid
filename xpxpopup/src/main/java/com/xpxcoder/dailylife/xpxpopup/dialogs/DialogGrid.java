@@ -16,9 +16,9 @@ import android.widget.SimpleAdapter;
 
 import androidx.annotation.Nullable;
 
-import com.xpsoft.xpxDroid.R;
-import com.xpsoft.xpxDroid.tools.SysUtils;
-import com.xpsoft.xpxDroid.tools.UiUtils;
+import com.xpxcoder.xpxDroid.R;
+import com.xpxcoder.xpxDroid.tools.SysUtils;
+import com.xpxcoder.xpxDroid.tools.UiUtils;
 
 import java.util.ArrayList;
 import java.util.HashMap;

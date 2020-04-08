@@ -12,10 +12,10 @@ import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.xpsoft.xpxDroid.R;
-import com.xpsoft.xpxDroid.adapter.recyclerview.DialogBaseSelectAdapter;
-import com.xpsoft.xpxDroid.adapter.recyclerview.dispatchgrouplistAdapter;
-import com.xpsoft.xpxDroid.tools.UiUtils;
+import com.xpxcoder.xpxDroid.R;
+import com.xpxcoder.xpxDroid.adapter.recyclerview.DialogBaseSelectAdapter;
+import com.xpxcoder.xpxDroid.adapter.recyclerview.dispatchgrouplistAdapter;
+import com.xpxcoder.xpxDroid.tools.UiUtils;
 
 import java.util.ArrayList;
 import java.util.List;

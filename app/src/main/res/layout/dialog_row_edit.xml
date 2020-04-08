@@ -17,7 +17,7 @@
             android:gravity="center_vertical|right"
             android:text="测试：" />
 
-        <com.xpsoft.xpxDroid.tools.dialogs.DialogTextInputLayout
+        <com.xpxcoder.xpxDroid.tools.dialogs.DialogTextInputLayout
             android:id="@+id/tilAccount"
             app:errorTextAppearance="@style/AppTheme"
             android:layout_width="match_parent"
@@ -34,7 +34,7 @@
                 android:background="@drawable/shape_edit_item_bg_select_with_padding"
                 android:hint="请输入" />
 
-        </com.xpsoft.xpxDroid.tools.dialogs.DialogTextInputLayout>
+        </com.xpxcoder.xpxDroid.tools.dialogs.DialogTextInputLayout>
 
     </LinearLayout>
 </layout>

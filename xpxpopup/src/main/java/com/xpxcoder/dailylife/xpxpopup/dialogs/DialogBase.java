@@ -17,9 +17,9 @@ import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.DialogFragment;
 
-import com.xpsoft.xpxDroid.R;
-import com.xpsoft.xpxDroid.databinding.DialogBaseTest1Binding;
-import com.xpsoft.xpxDroid.tools.UiUtils;
+import com.xpxcoder.xpxDroid.R;
+import com.xpxcoder.xpxDroid.databinding.DialogBaseTest1Binding;
+import com.xpxcoder.xpxDroid.tools.UiUtils;
 
 import java.util.List;
 

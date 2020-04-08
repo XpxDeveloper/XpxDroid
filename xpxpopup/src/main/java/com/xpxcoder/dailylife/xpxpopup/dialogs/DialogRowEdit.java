@@ -14,10 +14,10 @@ import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 
 import com.google.android.material.textfield.TextInputLayout;
-import com.xpsoft.xpxDroid.R;
-import com.xpsoft.xpxDroid.databinding.DialogRowEditBinding;
-import com.xpsoft.xpxDroid.tools.EditTextWatcher;
-import com.xpsoft.xpxDroid.tools.UiUtils;
+import com.xpxcoder.xpxDroid.R;
+import com.xpxcoder.xpxDroid.databinding.DialogRowEditBinding;
+import com.xpxcoder.xpxDroid.tools.EditTextWatcher;
+import com.xpxcoder.xpxDroid.tools.UiUtils;
 
 /**
  * Created by XPSoft on 2018/3/27.

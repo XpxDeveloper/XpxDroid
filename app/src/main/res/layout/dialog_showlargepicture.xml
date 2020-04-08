@@ -52,7 +52,7 @@
         android:gravity="center"
         android:layout_marginStart="20dp" >
 
-         <com.xpsoft.xpxDroid.tools.showLargePhoto.DragImageView
+         <com.xpxcoder.xpxDroid.tools.showLargePhoto.DragImageView
         android:id="@+id/dialog_picture"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" 

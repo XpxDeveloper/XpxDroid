@@ -14,9 +14,9 @@ import android.view.WindowManager;
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 
-import com.xpsoft.xpxDroid.R;
-import com.xpsoft.xpxDroid.databinding.DialogBaseTest1Binding;
-import com.xpsoft.xpxDroid.tools.UiUtils;
+import com.xpxcoder.xpxDroid.R;
+import com.xpxcoder.xpxDroid.databinding.DialogBaseTest1Binding;
+import com.xpxcoder.xpxDroid.tools.UiUtils;
 
 /**
  * Created by XPSoft on 2018/3/26.

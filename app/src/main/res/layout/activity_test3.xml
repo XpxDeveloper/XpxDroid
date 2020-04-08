@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
-        <variable   name="test3"    type="com.xpsoft.xpxDroid.models.databinding.Test3" />
+        <variable   name="test3"    type="com.xpxcoder.xpxDroid.models.databinding.Test3" />
 
     </data>
 

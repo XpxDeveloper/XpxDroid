@@ -5,10 +5,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-        <com.xpsoft.xpxDroid.widget.AppTitleBar
+        <com.xpxcoder.xpxDroid.widget.AppTitleBar
             android:id="@+id/appTitleBar"
             android:layout_width="match_parent"
-            android:layout_height="40dp"></com.xpsoft.xpxDroid.widget.AppTitleBar>
+            android:layout_height="40dp"></com.xpxcoder.xpxDroid.widget.AppTitleBar>
         <fm.jiecao.jcvideoplayer_lib.JCVideoPlayerStandard
             android:id="@+id/jiecao_Player"
             android:layout_width="match_parent"

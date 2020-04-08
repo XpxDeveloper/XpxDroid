@@ -40,7 +40,7 @@ import com.baidu.mapapi.map.MarkerOptions;
 import com.baidu.mapapi.map.Projection;
 import com.baidu.mapapi.model.LatLng;
 import com.baidu.mapapi.model.LatLngBounds;
-import com.xpsoft.xpxDroid.R;
+import com.xpxcoder.xpxDroid.R;
 
 import java.util.ArrayList;
 import java.util.Collections;

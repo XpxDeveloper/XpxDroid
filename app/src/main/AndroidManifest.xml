@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.xpsoft.xpxDroid">
+    package="com.xpxcoder.xpxDroid">
 
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
@@ -40,7 +40,7 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
-        android:name=".global.baseApp"
+        android:name="com.xpxcoder.xpxDroid.global.baseApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -52,67 +52,67 @@
         android:theme="@style/AppTheme">
 
         <!-- activity BEGIN=====================================================================================================================-->
-        <activity android:name=".views.DeskTopActivity" android:configChanges="orientation|screenSize" android:screenOrientation="portrait">
+        <activity android:name="com.xpxcoder.xpxDroid.views.DeskTopActivity" android:configChanges="orientation|screenSize" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".views.IM1_0Activity" android:configChanges="orientation|screenSize" android:launchMode="singleTop">
+        <activity android:name="com.xpxcoder.xpxDroid.views.IM1_0Activity" android:configChanges="orientation|screenSize" android:launchMode="singleTop">
         </activity>
-        <activity android:name=".views.IM2_0Activity" android:configChanges="orientation|screenSize" android:launchMode="singleTop">
+        <activity android:name="com.xpxcoder.xpxDroid.views.IM2_0Activity" android:configChanges="orientation|screenSize" android:launchMode="singleTop">
         </activity>
-        <activity android:name=".views.DrawerActivity" android:configChanges="orientation|screenSize" android:launchMode="singleTop">
+        <activity android:name="com.xpxcoder.xpxDroid.views.DrawerActivity" android:configChanges="orientation|screenSize" android:launchMode="singleTop">
         </activity>
-        <activity android:name=".views.ContactsActivity" android:configChanges="orientation|screenSize" android:launchMode="singleTop">
+        <activity android:name="com.xpxcoder.xpxDroid.views.ContactsActivity" android:configChanges="orientation|screenSize" android:launchMode="singleTop">
         </activity>
-        <activity android:name=".views.Test3Activity" android:configChanges="orientation|screenSize" android:launchMode="singleTop">
+        <activity android:name="com.xpxcoder.xpxDroid.views.Test3Activity" android:configChanges="orientation|screenSize" android:launchMode="singleTop">
         </activity>
-        <activity android:name=".views.DialogActivity" android:configChanges="orientation|screenSize" android:launchMode="singleTop">
+        <activity android:name="com.xpxcoder.xpxDroid.views.DialogActivity" android:configChanges="orientation|screenSize" android:launchMode="singleTop">
         </activity>
-        <activity android:name=".views.BMapActivity" android:configChanges="orientation|screenSize" android:launchMode="singleTop">
+        <activity android:name="com.xpxcoder.xpxDroid.views.BMapActivity" android:configChanges="orientation|screenSize" android:launchMode="singleTop">
         </activity>
-        <activity android:name=".views.bmap.MarkerClusterDemo" android:configChanges="orientation|screenSize" android:launchMode="singleTop">
+        <activity android:name="com.xpxcoder.xpxDroid.views.bmap.MarkerClusterDemo" android:configChanges="orientation|screenSize" android:launchMode="singleTop">
         </activity>
 
-        <activity android:name=".views.IjkplayerActivity" android:configChanges="orientation|screenSize" android:launchMode="singleTop">
+        <activity android:name="com.xpxcoder.xpxDroid.views.IjkplayerActivity" android:configChanges="orientation|screenSize" android:launchMode="singleTop">
         </activity>
-        <activity android:name=".views.RetrofitActivity" android:configChanges="orientation|screenSize" android:launchMode="singleTop">
+        <activity android:name="com.xpxcoder.xpxDroid.views.RetrofitActivity" android:configChanges="orientation|screenSize" android:launchMode="singleTop">
         </activity>
-        <activity android:name=".views.CustomViewActivity" android:configChanges="orientation|screenSize" android:launchMode="singleTop">
+        <activity android:name="com.xpxcoder.xpxDroid.views.CustomViewActivity" android:configChanges="orientation|screenSize" android:launchMode="singleTop">
         </activity>
-        <activity android:name=".views.AnimateActivity" android:configChanges="orientation|screenSize" android:launchMode="singleTop">
+        <activity android:name="com.xpxcoder.xpxDroid.views.AnimateActivity" android:configChanges="orientation|screenSize" android:launchMode="singleTop">
         </activity>
-        <activity android:name=".views.MVPActivity" android:configChanges="orientation|screenSize" android:launchMode="singleTop">
+        <activity android:name="com.xpxcoder.xpxDroid.views.MVPActivity" android:configChanges="orientation|screenSize" android:launchMode="singleTop">
         </activity>
-        <activity android:name=".views.AppBarLayoutActivity" android:configChanges="orientation|screenSize" android:launchMode="singleTop">
+        <activity android:name="com.xpxcoder.xpxDroid.views.AppBarLayoutActivity" android:configChanges="orientation|screenSize" android:launchMode="singleTop">
         </activity>
-        <activity android:name=".views.searchviews.SearchActivity" android:configChanges="orientation|screenSize" android:launchMode="singleTop">
+        <activity android:name="com.xpxcoder.xpxDroid.views.searchviews.SearchActivity" android:configChanges="orientation|screenSize" android:launchMode="singleTop">
         </activity>
-        <activity android:name=".views.gdmap.gdmapActivity" android:configChanges="orientation|screenSize" android:launchMode="singleTop">
+        <activity android:name="com.xpxcoder.xpxDroid.views.gdmap.gdmapActivity" android:configChanges="orientation|screenSize" android:launchMode="singleTop">
         </activity>
-        <activity android:name=".views.gdmap.cluster.ClusterDemoActivity" android:configChanges="orientation|screenSize" android:launchMode="singleTop">
+        <activity android:name="com.xpxcoder.xpxDroid.views.gdmap.cluster.ClusterDemoActivity" android:configChanges="orientation|screenSize" android:launchMode="singleTop">
         </activity>
-        <activity android:name=".views.PermissionTestActivity" android:configChanges="orientation|screenSize" android:launchMode="singleTop">
+        <activity android:name="com.xpxcoder.xpxDroid.views.PermissionTestActivity" android:configChanges="orientation|screenSize" android:launchMode="singleTop">
         </activity>
-        <activity android:name=".views.TBSActivity" android:configChanges="orientation|screenSize" android:launchMode="singleTop">
+        <activity android:name="com.xpxcoder.xpxDroid.views.TBSActivity" android:configChanges="orientation|screenSize" android:launchMode="singleTop">
         </activity>
-        <activity android:name=".views.LockScreenMsgActivity" android:excludeFromRecents="true" android:taskAffinity="" android:configChanges="orientation|screenSize" android:launchMode="singleInstance">
+        <activity android:name="com.xpxcoder.xpxDroid.views.LockScreenMsgActivity" android:excludeFromRecents="true" android:taskAffinity="" android:configChanges="orientation|screenSize" android:launchMode="singleInstance">
         </activity>
 
         <!-- activity END=====================================================================================================================-->
 
         <!-- service BEGIN=====================================================================================================================-->
 
-        <service android:name=".services.LockScreenService"  android:enabled="true"
+        <service android:name="com.xpxcoder.xpxDroid.services.LockScreenService"  android:enabled="true"
             android:exported="true" />
 
         <!-- service END=====================================================================================================================-->
 
         <!-- receiver BEGIN=====================================================================================================================-->
 
-        <receiver android:name=".receivers.LockScreenMsgReceiver"  android:enabled="true"
+        <receiver android:name="com.xpxcoder.xpxDroid.receivers.LockScreenMsgReceiver"  android:enabled="true"
             android:exported="true">
             <intent-filter>
 

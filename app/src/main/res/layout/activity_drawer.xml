@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.xpsoft.xpxDroid.views.DrawerActivity">
+    tools:context="com.xpxcoder.xpxDroid.views.DrawerActivity">
 
     <androidx.drawerlayout.widget.DrawerLayout
         android:id="@+id/drawer"
@@ -15,10 +15,10 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <com.xpsoft.xpxDroid.widget.AppTitleBar
+            <com.xpxcoder.xpxDroid.widget.AppTitleBar
                 android:id="@+id/appTitleBar"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"></com.xpsoft.xpxDroid.widget.AppTitleBar>
+                android:layout_height="40dp"></com.xpxcoder.xpxDroid.widget.AppTitleBar>
 
             <TextView
                 android:layout_width="match_parent"

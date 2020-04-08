@@ -10,7 +10,6 @@ import android.view.Window;
 import android.view.WindowManager;
 
 import com.process.ScreenManager;
-import com.xpsoft.xpxDroid.R;
 
 /**
  * Created by XPSoft on 2018/7/31.

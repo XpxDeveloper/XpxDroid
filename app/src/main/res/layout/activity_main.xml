@@ -26,11 +26,11 @@
             android:background="@color/green"
             ></com.google.android.material.tabs.TabLayout>
 
-        <com.xpsoft.xpxDroid.widget.ViewPagerCustomScroll
+        <com.xpxcoder.xpxDroid.widget.ViewPagerCustomScroll
             android:layout_below="@id/mTabLayout"
             android:id="@+id/ViewPager"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"></com.xpsoft.xpxDroid.widget.ViewPagerCustomScroll>
+            android:layout_height="match_parent"></com.xpxcoder.xpxDroid.widget.ViewPagerCustomScroll>
 
     </RelativeLayout>
 </layout>

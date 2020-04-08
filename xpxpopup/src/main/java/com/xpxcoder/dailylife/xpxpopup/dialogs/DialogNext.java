@@ -14,10 +14,10 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 
-import com.xpsoft.xpxDroid.R;
-import com.xpsoft.xpxDroid.databinding.DialogBaseTest1Binding;
-import com.xpsoft.xpxDroid.tools.UiUtils;
-import com.xpsoft.xpxDroid.widget.MyTextView;
+import com.xpxcoder.xpxDroid.R;
+import com.xpxcoder.xpxDroid.databinding.DialogBaseTest1Binding;
+import com.xpxcoder.xpxDroid.tools.UiUtils;
+import com.xpxcoder.xpxDroid.widget.MyTextView;
 
 import java.util.ArrayList;
 import java.util.List;

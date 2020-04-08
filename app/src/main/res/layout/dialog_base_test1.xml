@@ -5,11 +5,11 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.xpsoft.xpxDroid.tools.dialogs.DialogBaseHeader
+    <com.xpxcoder.xpxDroid.tools.dialogs.DialogBaseHeader
         android:id="@+id/dialogHeader"
         android:background="@drawable/dialog_background_radius_ltr"
         android:layout_width="match_parent"
-        android:layout_height="40dp"></com.xpsoft.xpxDroid.tools.dialogs.DialogBaseHeader>
+        android:layout_height="40dp"></com.xpxcoder.xpxDroid.tools.dialogs.DialogBaseHeader>
 
     <LinearLayout
         android:id="@+id/llContent"
@@ -22,10 +22,10 @@
         android:textSize="@dimen/app_global_edittext_textsize"
          />
 
-    <com.xpsoft.xpxDroid.tools.dialogs.DialogBaseFooter
+    <com.xpxcoder.xpxDroid.tools.dialogs.DialogBaseFooter
         android:id="@+id/dialogFooter"
         android:background="@drawable/dialog_background_radius_lrb"
         android:layout_width="match_parent"
-        android:layout_height="50dp"></com.xpsoft.xpxDroid.tools.dialogs.DialogBaseFooter>
+        android:layout_height="50dp"></com.xpxcoder.xpxDroid.tools.dialogs.DialogBaseFooter>
 
 </LinearLayout></layout>

@@ -1,0 +1,90 @@
+package com.xpxcoder.xpxDroid.fragment.lazybase_02;
+
+import android.os.Bundle;
+import androidx.annotation.Nullable;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+import com.xpxcoder.xpxDroid.R;
+import com.xpxcoder.xpxDroid.adapter.baseFragmentAdapter;
+import com.xpxcoder.xpxDroid.databinding.FragmentDispatchBinding;
+import com.xpxcoder.xpxDroid.fragment.baseFragment;
+import com.xpxcoder.xpxDroid.models.eventbus.xpxEvent;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * Created by XPSoft on 2018/2/16.
+ */
+
+public class dispatch_02_Fragment extends lazyFragment {
+
+    private FragmentDispatchBinding mBinding;
+    private com.xpxcoder.xpxDroid.widget.ViewPagerCustomScroll viewPager;
+    private baseFragmentAdapter mFragAdapter;
+
+    private List<baseFragment> mFragList = new ArrayList<>();
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
+
+    @Override
+    public lazyFragment setLayoutId(int resId) {
+        mResId=resId;
+        return this;
+    }
+
+    @Nullable
+    @Override
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
+        return super.onCreateView(inflater, container, savedInstanceState);
+
+    }
+
+    @Override
+    public void initRealView() {
+        super.initRealView();
+        mFragList.clear();
+        viewPager= (com.xpxcoder.xpxDroid.widget.ViewPagerCustomScroll) mRootView.findViewById(R.id.ViewPager);
+        mFragList.add(new dispatchGroupList_02_Fragment().setLayoutId(R.layout.fragment_grouplist).setParentViewPager(viewPager));
+//        mFragList.add(new lazyFragment().setRealFragClass(dispatchChatRoomFragment.class).setParentViewPager(mBinding.ViewPager));
+
+        if(mFragAdapter==null){
+            mFragAdapter = new baseFragmentAdapter(getChildFragmentManager(), null, mFragList);
+        }
+        viewPager.setForbidScroll(true);
+        viewPager.setOffscreenPageLimit(mFragList.size());//
+        viewPager.setAdapter(mFragAdapter);//给ViewPager设置适配器
+        mFragAdapter.notifyDataSetChanged();
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+    }
+
+    @Override
+    public void XpxEvent(xpxEvent _xpxEvent) {
+
+    }
+}

@@ -1,0 +1,15 @@
+package com.xpxcoder.xpxDroid.views;
+
+import android.os.Bundle;
+import androidx.annotation.Nullable;
+
+/**
+ * Created by XPSoft on 2018/6/24.
+ */
+
+public class MVPActivity extends baseActivity {
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
+}
