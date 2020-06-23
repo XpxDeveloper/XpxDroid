@@ -98,7 +98,7 @@ public abstract class DialogBase extends DialogFragment {
             WindowManager wm=window.getWindowManager();
             int width=wm.getDefaultDisplay().getWidth()- UiUtils.dp2px(mContext, 30);
             window.setLayout(width, WindowManager.LayoutParams.WRAP_CONTENT);//这2行,和上面的一样,注意顺序就行;
-            Log.i(TAG, "onActivityCreated: "+wlp.width+"，"+UiUtils.dp2px(mContext, 30));//test
+            Log.i(TAG, "onActivityCreated: "+wlp.width+"，"+UiUtils.dp2px(mContext, 30));//test2
         }
 
     }
