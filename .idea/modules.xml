@@ -3,7 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/XpxDroid.iml" filepath="$PROJECT_DIR$/XpxDroid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/XpxDroid-app.iml" filepath="$PROJECT_DIR$/app/XpxDroid-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xpxdroidbase/XpxDroid-xpxdroidbase.iml" filepath="$PROJECT_DIR$/xpxdroidbase/XpxDroid-xpxdroidbase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xpxpopup/XpxDroid-xpxpopup.iml" filepath="$PROJECT_DIR$/xpxpopup/XpxDroid-xpxpopup.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xpxDroid-XpxDroid.iml" filepath="$PROJECT_DIR$/xpxDroid-XpxDroid.iml" />
       <module fileurl="file://$PROJECT_DIR$/xpxdroidbase/xpxdroidbase.iml" filepath="$PROJECT_DIR$/xpxdroidbase/xpxdroidbase.iml" />
       <module fileurl="file://$PROJECT_DIR$/xpxpopup/xpxpopup.iml" filepath="$PROJECT_DIR$/xpxpopup/xpxpopup.iml" />
     </modules>
